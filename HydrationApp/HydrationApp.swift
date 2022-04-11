@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct HydrationAppApp: App {
+struct HydrationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchView()
+                .environmentObject(ContentModel())
         }
     }
 }

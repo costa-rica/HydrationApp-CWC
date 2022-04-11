@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01595D1027E9B52B001B7304 /* HydrationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D0F27E9B52B001B7304 /* HydrationAppApp.swift */; };
-		01595D1227E9B52B001B7304 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D1127E9B52B001B7304 /* ContentView.swift */; };
+		01595D1027E9B52B001B7304 /* HydrationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D0F27E9B52B001B7304 /* HydrationApp.swift */; };
+		01595D1227E9B52B001B7304 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D1127E9B52B001B7304 /* LaunchView.swift */; };
 		01595D1427E9B52C001B7304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01595D1327E9B52C001B7304 /* Assets.xcassets */; };
 		01595D1727E9B52C001B7304 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01595D1627E9B52C001B7304 /* Preview Assets.xcassets */; };
+		01595D1E27EA00BE001B7304 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D1D27EA00BE001B7304 /* LoginView.swift */; };
+		01595D2127EA067F001B7304 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D2027EA067F001B7304 /* ContentModel.swift */; };
+		01595D2427EA0796001B7304 /* RecordIntakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D2327EA0796001B7304 /* RecordIntakeView.swift */; };
+		01595D2627EA0AF9001B7304 /* CoreNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D2527EA0AF9001B7304 /* CoreNavView.swift */; };
+		01595D2827EA0C1C001B7304 /* IntakeHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D2727EA0C1C001B7304 /* IntakeHistoryView.swift */; };
+		01595D2B27EAEBE0001B7304 /* ExitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D2A27EAEBE0001B7304 /* ExitButton.swift */; };
+		01595D2E27EAEE80001B7304 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 01595D2D27EAEE80001B7304 /* data.json */; };
+		01595D3027EAEEFE001B7304 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D2F27EAEEFE001B7304 /* DataService.swift */; };
+		01595D3327EAEFB7001B7304 /* DailyIntake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D3227EAEFB7001B7304 /* DailyIntake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01595D0C27E9B52B001B7304 /* HydrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		01595D0F27E9B52B001B7304 /* HydrationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationAppApp.swift; sourceTree = "<group>"; };
-		01595D1127E9B52B001B7304 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		01595D0F27E9B52B001B7304 /* HydrationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationApp.swift; sourceTree = "<group>"; };
+		01595D1127E9B52B001B7304 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		01595D1327E9B52C001B7304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01595D1627E9B52C001B7304 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		01595D1D27EA00BE001B7304 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		01595D2027EA067F001B7304 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		01595D2327EA0796001B7304 /* RecordIntakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordIntakeView.swift; sourceTree = "<group>"; };
+		01595D2527EA0AF9001B7304 /* CoreNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNavView.swift; sourceTree = "<group>"; };
+		01595D2727EA0C1C001B7304 /* IntakeHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntakeHistoryView.swift; sourceTree = "<group>"; };
+		01595D2A27EAEBE0001B7304 /* ExitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButton.swift; sourceTree = "<group>"; };
+		01595D2D27EAEE80001B7304 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		01595D2F27EAEEFE001B7304 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		01595D3227EAEFB7001B7304 /* DailyIntake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyIntake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +69,15 @@
 		01595D0E27E9B52B001B7304 /* HydrationApp */ = {
 			isa = PBXGroup;
 			children = (
-				01595D0F27E9B52B001B7304 /* HydrationAppApp.swift */,
-				01595D1127E9B52B001B7304 /* ContentView.swift */,
+				01595D0F27E9B52B001B7304 /* HydrationApp.swift */,
+				01595D1127E9B52B001B7304 /* LaunchView.swift */,
+				01595D1D27EA00BE001B7304 /* LoginView.swift */,
+				01595D2227EA0754001B7304 /* CoreApp */,
+				01595D2927EAEBB7001B7304 /* Common */,
+				01595D1F27EA065A001B7304 /* ViewModel */,
 				01595D1327E9B52C001B7304 /* Assets.xcassets */,
+				01595D3127EAEF83001B7304 /* Model */,
+				01595D2C27EAEDE7001B7304 /* Resources */,
 				01595D1527E9B52C001B7304 /* Preview Content */,
 			);
 			path = HydrationApp;
@@ -65,6 +89,49 @@
 				01595D1627E9B52C001B7304 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01595D1F27EA065A001B7304 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				01595D2027EA067F001B7304 /* ContentModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		01595D2227EA0754001B7304 /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				01595D2327EA0796001B7304 /* RecordIntakeView.swift */,
+				01595D2727EA0C1C001B7304 /* IntakeHistoryView.swift */,
+				01595D2527EA0AF9001B7304 /* CoreNavView.swift */,
+			);
+			path = CoreApp;
+			sourceTree = "<group>";
+		};
+		01595D2927EAEBB7001B7304 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				01595D2A27EAEBE0001B7304 /* ExitButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		01595D2C27EAEDE7001B7304 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01595D2D27EAEE80001B7304 /* data.json */,
+				01595D2F27EAEEFE001B7304 /* DataService.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		01595D3127EAEF83001B7304 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01595D3227EAEFB7001B7304 /* DailyIntake.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01595D1727E9B52C001B7304 /* Preview Assets.xcassets in Resources */,
+				01595D2E27EAEE80001B7304 /* data.json in Resources */,
 				01595D1427E9B52C001B7304 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +205,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01595D1227E9B52B001B7304 /* ContentView.swift in Sources */,
-				01595D1027E9B52B001B7304 /* HydrationAppApp.swift in Sources */,
+				01595D3027EAEEFE001B7304 /* DataService.swift in Sources */,
+				01595D1E27EA00BE001B7304 /* LoginView.swift in Sources */,
+				01595D2B27EAEBE0001B7304 /* ExitButton.swift in Sources */,
+				01595D2827EA0C1C001B7304 /* IntakeHistoryView.swift in Sources */,
+				01595D2127EA067F001B7304 /* ContentModel.swift in Sources */,
+				01595D1227E9B52B001B7304 /* LaunchView.swift in Sources */,
+				01595D2427EA0796001B7304 /* RecordIntakeView.swift in Sources */,
+				01595D3327EAEFB7001B7304 /* DailyIntake.swift in Sources */,
+				01595D1027E9B52B001B7304 /* HydrationApp.swift in Sources */,
+				01595D2627EA0AF9001B7304 /* CoreNavView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
