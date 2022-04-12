@@ -8,7 +8,6 @@
 import Foundation
 
 struct DailyIntake: Identifiable, Codable {
-//    var id:UUID?
     var id:Int
     var date:String
     var intake:Int

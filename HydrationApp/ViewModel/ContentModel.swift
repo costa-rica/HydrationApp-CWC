@@ -60,17 +60,11 @@ class ContentModel: ObservableObject {
             self.intakeHistory = readHistory()
             print("urlJsonDir:::", historyDir!.path)
         }
-        checkDate()
+        checkAndAddNewToday()
     }
     
-//    func makeFirstDailyIntake() -> [DailyIntake]{
-////        let new_entry = DailyIntake(id:0,date:today_string,intake:0)
-//        return [DailyIntake(id:0,date:today_string,intake:0)]
-//    }
-    
-    
     //if current date not found in historyJson add date
-    func checkDate() {
+    func checkAndAddNewToday() {
         for i in intakeHistory {
             if today_string == i.date {
                 print("today already exists")
@@ -78,11 +72,12 @@ class ContentModel: ObservableObject {
             }
         }
         let new_entry = DailyIntake(id:id_latest+1,date:today_string,intake:0)
-        intakeHistory.append(new_entry)
+        self.intakeHistory.append(new_entry)
+        writeJson(intakeHistory: intakeHistory)
         print("created new entry")
         return
     }
-    
+    //RecordIntakeView - add cup of water button
     func addCup(date:String) {
         for i in intakeHistory {
             print("i.date:::",i.date, ":::",date)
@@ -94,8 +89,7 @@ class ContentModel: ObservableObject {
         }
         writeJson(intakeHistory: intakeHistory)
     }
-    
-    
+    //init
     func checkForExistingHistory() -> Bool {
         if manager_universal.fileExists(atPath: historyJson!.path) {
             return true
@@ -103,7 +97,7 @@ class ContentModel: ObservableObject {
             return false
         }
     }
-    
+    //init
     func createJsonDirectory() {
         do {
             try manager_universal.createDirectory(at: historyDir!, withIntermediateDirectories: true,attributes: [:])
@@ -111,12 +105,12 @@ class ContentModel: ObservableObject {
             print(error)
         }
     }
-    
+    //RecordIntakeView - add cup of water button
     func writeJson(intakeHistory: [DailyIntake]) {
         let encodedString = try! JSONEncoder().encode(intakeHistory)
         manager_universal.createFile(atPath: historyJson!.path, contents: encodedString, attributes: [:])
     }
-    
+    //intake history
     func deleteHistory() {
         //create FileManager
 //        let manager = FileManager.default
@@ -144,37 +138,13 @@ class ContentModel: ObservableObject {
             }
         }
     }
-    
+    //used in init
     func readHistory() -> [DailyIntake]{
-        
         print("reading exisiting history")
-        //create FileManager
-//        let manager = FileManager.default
-        
-        //create object that knows where the file manager path should lead to
-//        guard let urlJsonDir = manager_universal.urls(for: .documentDirectory,
-//                                        in: .userDomainMask).first else {
-//            return [DailyIntake]()
-//        }
-//        self.urlJsonDir = urlJsonDir
-//        do {
-//        let newFolderUrl = urlJson?.appendingPathComponent("jsonFiles")
-//        } catch {
-//            print(error)
-//        }
-        
-        
-        //create object that knows the file to delete using the manager url immediately above
-//        let jsonFile01 = try newFolderUrl?.appendingPathComponent("jsonFile01.json")
-        
         let data = manager_universal.contents(atPath: historyJson!.path)
-        
         guard data == nil else {
-            print("data from jsonFile01.json::::",data!)
-            
             do {
                 let intakeData = try JSONDecoder().decode([DailyIntake].self, from: data!)
-                
                 return intakeData
             }
             catch {
@@ -184,7 +154,6 @@ class ContentModel: ObservableObject {
         }
         return [DailyIntake]()
     }
-    
 }
 
 
