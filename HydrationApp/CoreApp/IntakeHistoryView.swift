@@ -29,15 +29,10 @@ struct IntakeHistoryView: View {
         }
         return temp_date
     }
-    var datePickerIndex = dates[-1]
+    @State var datePickerIndex = ""
     
-//    var dates: [String] {
-//        var temp_date: [String] = []
-//        for i in contentModelVar.intakeHistory {
-//            temp_date.append(i.date)
-//        }
-//        return temp_date
-//    }
+    @State private var showEditHistModalView = false
+    
     var cups_on_date:Int {
         for i in contentModelVar.intakeHistory {
             if i.date == datePickerIndex {
@@ -62,6 +57,7 @@ struct IntakeHistoryView: View {
                     Text($0).tag($0)
                 }
             }
+            .onAppear(perform: updateDatePickerIndex)
             .pickerStyle(WheelPickerStyle())
             .padding(0)
             
@@ -69,6 +65,7 @@ struct IntakeHistoryView: View {
             Text("Number of cups drank: \(cups_on_date)")
             
         }
+            
         .padding(5)
 //            Text("number of cups today: \(contentModelVar.intakeHistory[datePickerIndex].intake)")
 //            Divider()
@@ -78,20 +75,26 @@ struct IntakeHistoryView: View {
 //            
             Spacer()
 //            Divider()
-//            Button {contentModelVar.deleteHistory()} label: {
-//                ZStack{
-//                    Rectangle()
-//                        .foregroundColor(.red)
-//                        .frame(height: 48)
-//                        .cornerRadius(10)
-//                    Text("Delete History")
-//                }
-//            }
+            Button {self.showEditHistModalView.toggle()} label: {
+                ZStack{
+                    Rectangle()
+                        .foregroundColor(.green)
+                        .frame(height: 48)
+                        .cornerRadius(10)
+                    Text("Edit History")
+                }
+            }
+            .sheet(isPresented: $showEditHistModalView){
+                EditHistModalView(date:datePickerIndex,numberOfCups: "")
+            }
 //            .padding()
 
             
         }
         .background(.gray)
+    }
+    func updateDatePickerIndex() {
+        datePickerIndex = dates[dates.count-2]
     }
 }
 

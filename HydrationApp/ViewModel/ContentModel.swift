@@ -46,7 +46,7 @@ class ContentModel: ObservableObject {
     lazy private var historyJson = historyDir?.appendingPathComponent("jsonFile01.json")
     
     init() {
-        //if history exists use it, otherwise go to data service
+        //if history exists use it, otherwise make folder and create new intakeHistory
         if checkForExistingHistory() == false {
 //        //create insatnce of data service
 //        let service = DataService()
@@ -109,6 +109,8 @@ class ContentModel: ObservableObject {
     func writeJson(intakeHistory: [DailyIntake]) {
         let encodedString = try! JSONEncoder().encode(intakeHistory)
         manager_universal.createFile(atPath: historyJson!.path, contents: encodedString, attributes: [:])
+        print("history written")
+        print("In writeJson func:::", encodedString, intakeHistory)
     }
     //intake history
     func deleteHistory() {
@@ -153,6 +155,18 @@ class ContentModel: ObservableObject {
             return [DailyIntake]()
         }
         return [DailyIntake]()
+    }
+    //function to edit the number of cups in particular day
+    func editHistory(date:String, numberOfCups: String) {
+        for i in 0..<intakeHistory.count {
+            if intakeHistory[i].date == date {
+                intakeHistory[i].intake = Int(numberOfCups)!
+            }
+        }
+        
+        
+        print("In editHistory func:::", intakeHistory)
+        writeJson(intakeHistory: intakeHistory)
     }
 }
 

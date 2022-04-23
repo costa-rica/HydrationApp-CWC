@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01044C502805A6360070B251 /* EditHistModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01044C4F2805A6360070B251 /* EditHistModalView.swift */; };
 		01595D1027E9B52B001B7304 /* HydrationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D0F27E9B52B001B7304 /* HydrationApp.swift */; };
 		01595D1227E9B52B001B7304 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01595D1127E9B52B001B7304 /* LaunchView.swift */; };
 		01595D1427E9B52C001B7304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01595D1327E9B52C001B7304 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01044C4F2805A6360070B251 /* EditHistModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHistModalView.swift; sourceTree = "<group>"; };
 		01595D0C27E9B52B001B7304 /* HydrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01595D0F27E9B52B001B7304 /* HydrationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationApp.swift; sourceTree = "<group>"; };
 		01595D1127E9B52B001B7304 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				01595D2327EA0796001B7304 /* RecordIntakeView.swift */,
 				01595D2727EA0C1C001B7304 /* IntakeHistoryView.swift */,
 				01595D2527EA0AF9001B7304 /* CoreNavView.swift */,
+				01044C4F2805A6360070B251 /* EditHistModalView.swift */,
 			);
 			path = CoreApp;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				01595D3027EAEEFE001B7304 /* DataService.swift in Sources */,
 				01595D1E27EA00BE001B7304 /* LoginView.swift in Sources */,
+				01044C502805A6360070B251 /* EditHistModalView.swift in Sources */,
 				01595D2B27EAEBE0001B7304 /* ExitButton.swift in Sources */,
 				01595D2827EA0C1C001B7304 /* IntakeHistoryView.swift in Sources */,
 				01595D2127EA067F001B7304 /* ContentModel.swift in Sources */,
